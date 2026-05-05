@@ -9,11 +9,16 @@ import net.minecraft.world.item.UseAnim;
 
 public class ModFoodProperties {
     public static final FoodProperties RADISH = new FoodProperties.Builder().nutrition(3).saturationModifier(0.25f)
-            .effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 400), 0.35f).build();
-    public static final FoodProperties CYANIDE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.25f)
-            .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 700), 0.35f)
-            .effect(() -> new MobEffectInstance(MobEffects.POISON, 70), 0.35f)
-            //*
+            .effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 400), 0.35f)
+            .build();
+
+    public static final FoodProperties CYANIDE = new FoodProperties.Builder()
+            .nutrition(3)
+            .saturationModifier(0.25f)
+            .alwaysEdible() //В 1.21.1 его можно и при полной сытости кушать
+            .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 700), 1f)
+            .effect(() -> new MobEffectInstance(MobEffects.POISON, 70), 1f)
+
             .build();
 
     public UseAnim getUseAnimation(ItemStack stack) {

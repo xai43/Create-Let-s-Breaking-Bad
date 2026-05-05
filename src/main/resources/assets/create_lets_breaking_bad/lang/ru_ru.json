@@ -1,4 +1,6 @@
 {
   "item.create_lets_breaking_bad.cyanide": "Цианид",
-  "item.create_lets_breaking_bad.cyanide.desc": "Цианистый Калий"
+  "item.create_lets_breaking_bad.cyanide.desc": "Цианистый Калий - 20 мг",
+  "death.attack.cyanide_overdose": "%s был убит слишком высокой дозой Цианида"
+
 }

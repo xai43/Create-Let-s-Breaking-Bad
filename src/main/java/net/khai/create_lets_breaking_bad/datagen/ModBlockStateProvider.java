@@ -1,7 +1,6 @@
 package net.khai.create_lets_breaking_bad.datagen;
 
 import net.khai.create_lets_breaking_bad.Create_Lets_Breaking_Bad;
-import net.khai.create_lets_breaking_bad.Create_Lets_Breaking_Bad;
 import net.khai.create_lets_breaking_bad.block.ModBlocks;
 import net.khai.create_lets_breaking_bad.block.custom.BismuthLampBlock;
 import net.minecraft.data.PackOutput;
@@ -19,25 +18,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        //blockWithItem(ModBlocks.*);
-
-        //stairsBlock(ModBlocks.*.get(), blockTexture(ModBlocks.*.get()));
-        //slabBlock(ModBlocks.*.get(), blockTexture(ModBlocks.*.get()), blockTexture(ModBlocks.*.get()));
-
-        //buttonBlock(ModBlocks.BISMUTH_BUTTON.get(), blockTexture(ModBlocks.*.get()));
-        //pressurePlateBlock(ModBlocks.BISMUTH_PRESSURE_PLATE.get(), blockTexture(ModBlocks.*.get()));
-
-        //fenceGateBlock(ModBlocks.BISMUTH_FENCE_GATE.get(), blockTexture(ModBlocks.*.get()));
-        //wallBlock(ModBlocks.BISMUTH_WALL.get(), blockTexture(ModBlocks.*.get()));
-
-        //doorBlockWithRenderType(ModBlocks.BISMUTH_DOOR.get(), modLoc("block/bismuth_door_bottom"), modLoc("block/bismuth_door_top"), "cutout");
-        //trapdoorBlockWithRenderType(ModBlocks.BISMUTH_TRAPDOOR.get(), modLoc("block/bismuth_trapdoor"), true, "cutout");
-
-        //blockItem(ModBlocks.*);
-        //blockItem(ModBlocks.BISMUTH_TRAPDOOR, "_bottom");
 
         customLamp();
-
 
     }
 
@@ -52,8 +34,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
             }
         });
 
-        simpleBlockItem(ModBlocks.BISMUTH_LAMP.get(), models().cubeAll("bismuth_lamp_on",
-                ResourceLocation.fromNamespaceAndPath(Create_Lets_Breaking_Bad.MOD_ID, "block/" + "bismuth_lamp_on")));
+        simpleBlockItem(ModBlocks.BISMUTH_LAMP.get(), models().cubeAll("bismuth_lamp_off",
+                ResourceLocation.fromNamespaceAndPath(Create_Lets_Breaking_Bad.MOD_ID, "block/bismuth_lamp_off")));
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {
@@ -61,10 +43,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void blockItem(DeferredBlock<?> deferredBlock) {
-        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("tutorialmod:block/" + deferredBlock.getId().getPath()));
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("create_lets_breaking_bad:block/" + deferredBlock.getId().getPath()));
     }
 
     private void blockItem(DeferredBlock<?> deferredBlock, String appendix) {
-        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("tutorialmod:block/" + deferredBlock.getId().getPath() + appendix));
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("create_lets_breaking_bad:block/" + deferredBlock.getId().getPath() + appendix));
     }
 }

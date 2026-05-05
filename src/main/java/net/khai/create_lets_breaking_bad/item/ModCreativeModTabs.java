@@ -19,18 +19,19 @@ public class ModCreativeModTabs {
 
     public static final Supplier<CreativeModeTab> BISMUTH_ITEMS_TAB = CREATIVE_MODE_TAB.register("bismuth_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CYANIDE.get()))
-                    .title(Component.translatable("creativetab.tutormod.bismuth_items"))
+                    .title(Component.translatable("creativetab.create_lets_breaking_bad.bismuth_items"))
                     .displayItems((itemDisplayParameters, output) -> {
 
                         output.accept(ModBlocks.BISMUTH_LAMP);
                         output.accept(ModItems.CYANIDE);
+                        output.accept(ModItems.RADISH);
 
                     }).build());
 
     public static final Supplier<CreativeModeTab> BISMUTH_BLOCK_TAB = CREATIVE_MODE_TAB.register("bismuth_blocks_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Blocks.SAND)) // - (ModBlocks.*().get
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.BISMUTH_LAMP.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(Create_Lets_Breaking_Bad.MOD_ID, "bismuth_items_tab"))
-                    .title(Component.translatable("creativetab.tutormod.bismuth_blocks"))
+                    .title(Component.translatable("creativetab.create_lets_breaking_bad.bismuth_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
 
                         output.accept(ModBlocks.BISMUTH_LAMP);

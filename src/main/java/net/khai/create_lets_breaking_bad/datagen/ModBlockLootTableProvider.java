@@ -20,19 +20,15 @@ import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import java.util.Set;
 
 public class ModBlockLootTableProvider extends BlockLootSubProvider {
-    protected ModBlockLootTableProvider(HolderLookup.Provider registries) {
+    public ModBlockLootTableProvider(HolderLookup.Provider registries) {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags(), registries);
     }
 
     @Override
     protected void generate() {
-        //dropSelf(ModBlocks.*.get());
-        //add(ModBlocks.*.get(),
-        //        block -> createOreDrop(ModBlocks.*.get(), ModItems.*.get()));
-        //add(ModBlocks.*.get(),
-        //       block -> createMultipleOreDrops(ModBlocks.*.get(), ModItems.*.get(), 2, 5));
-        //add(ModBlocks.*.get(),
-        //        block -> createDoorTable(ModBlocks.*.get()));
+
+        dropSelf(ModBlocks.BISMUTH_LAMP.get());
+
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

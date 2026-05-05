@@ -1,7 +1,6 @@
 package net.khai.create_lets_breaking_bad.datagen;
 
 import net.khai.create_lets_breaking_bad.Create_Lets_Breaking_Bad;
-import net.khai.create_lets_breaking_bad.Create_Lets_Breaking_Bad;
 import net.khai.create_lets_breaking_bad.block.ModBlocks;
 import net.khai.create_lets_breaking_bad.item.ModItems;
 import net.minecraft.core.HolderLookup;
@@ -19,18 +18,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         super(output, registries);
     }
 
-  @Override
+    @Override
     protected void buildRecipes(RecipeOutput recipeOutput, HolderLookup.Provider holderLookup) {
-    //    List<ItemLike> --- = List.of(ModItems.*,
-    //            ModBlocks.*,  ModBlocks.*);
+        //List<ItemLike> BISMUTH_SMELTABLES = List.of(ModItems.RAW_BISMUTH,
+                //ModBlocks.BISMUTH_ORE,  ModBlocks.BISMUTH_DEEPSLATE_ORE);
 
-        //ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.*.get())
+        //ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BISMUTH_BLOCK.get())
         //        .pattern("AAA")
         //        .pattern("AAA")
         //        .pattern("AAA")
-        //        .define('A', ModItems.*.get())
-        //        .unlockedBy("has_bismuth", has(ModItems.*)).save(recipeOutput);
-
+        //        .define('A', ModItems.BISMUTH.get())
+        //        .unlockedBy("has_bismuth", has(ModItems.BISMUTH)).save(recipeOutput);
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

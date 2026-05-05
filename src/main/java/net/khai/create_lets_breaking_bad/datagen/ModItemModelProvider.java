@@ -1,7 +1,6 @@
 package net.khai.create_lets_breaking_bad.datagen;
 
 import net.khai.create_lets_breaking_bad.Create_Lets_Breaking_Bad;
-import net.khai.create_lets_breaking_bad.Create_Lets_Breaking_Bad;
 import net.khai.create_lets_breaking_bad.block.ModBlocks;
 import net.khai.create_lets_breaking_bad.item.ModItems;
 import net.minecraft.data.PackOutput;
@@ -18,13 +17,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        //basicItem(ModItems.*.get());
-        basicItem(ModItems.CYANIDE.get());
         basicItem(ModItems.RADISH.get());
+        basicItem(ModItems.CYANIDE.get());
 
-        //buttonItem(ModBlocks.*, ModBlocks.*);
-        //fenceItem(ModBlocks.*, ModBlocks.*);
-        //wallItem(ModBlocks.*, ModBlocks.*);
     }
 
     public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {

@@ -1,7 +1,6 @@
 package net.khai.create_lets_breaking_bad.datagen;
 
 import net.khai.create_lets_breaking_bad.Create_Lets_Breaking_Bad;
-import net.khai.create_lets_breaking_bad.Create_Lets_Breaking_Bad;
 import net.khai.create_lets_breaking_bad.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -20,15 +19,5 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         //tag(BlockTags.MINEABLE_WITH_AXE)
-                //.add(ModBlocks.*.get())
-
-
-        //tag(BlockTags.NEEDS_IRON_TOOL)
-                //.add(ModBlocks.*.get());
-
-        //tag(BlockTags.FENCES).add(ModBlocks.*.get());
-        //tag(BlockTags.FENCE_GATES).add(ModBlocks.*.get());
-        //tag(BlockTags.WALLS).add(ModBlocks.*.get());
-
     }
 }

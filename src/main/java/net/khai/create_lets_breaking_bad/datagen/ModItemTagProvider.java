@@ -1,7 +1,6 @@
 package net.khai.create_lets_breaking_bad.datagen;
 
 import net.khai.create_lets_breaking_bad.Create_Lets_Breaking_Bad;
-import net.khai.create_lets_breaking_bad.Create_Lets_Breaking_Bad;
 import net.khai.create_lets_breaking_bad.item.ModItems;
 import net.khai.create_lets_breaking_bad.util.ModTags;
 import net.minecraft.core.HolderLookup;
@@ -21,9 +20,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        //tag(ModTags.Items.*)
-                //.add(ModItems.*.get())
-
+        //tag(ModTags.Items.*);
 
     }
 }

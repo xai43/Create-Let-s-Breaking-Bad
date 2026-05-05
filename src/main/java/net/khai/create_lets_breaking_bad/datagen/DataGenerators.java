@@ -1,7 +1,6 @@
 package net.khai.create_lets_breaking_bad.datagen;
 
 import net.khai.create_lets_breaking_bad.Create_Lets_Breaking_Bad;
-import net.khai.create_lets_breaking_bad.Create_Lets_Breaking_Bad;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -28,21 +27,21 @@ public class DataGenerators {
 
         //LootTable
         generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(),
-                List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
+                List.of(new LootTableProvider.SubProviderEntry(net.khai.create_lets_breaking_bad.datagen.ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
 
         //Recipes
-        generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new net.khai.create_lets_breaking_bad.datagen.ModRecipeProvider(packOutput, lookupProvider));
 
         //Tags
-        BlockTagsProvider blockTagsProvider = new ModBlockTagProvider(packOutput, lookupProvider, existingFileHelper);
+        BlockTagsProvider blockTagsProvider = new net.khai.create_lets_breaking_bad.datagen.ModBlockTagProvider(packOutput, lookupProvider, existingFileHelper);
         generator.addProvider(event.includeServer(), blockTagsProvider);
-        generator.addProvider(event.includeServer(), new ModItemTagProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
+        generator.addProvider(event.includeServer(), new net.khai.create_lets_breaking_bad.datagen.ModItemTagProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
 
         //Map
-        generator.addProvider(event.includeServer(), new ModDataMapProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new net.khai.create_lets_breaking_bad.datagen.ModDataMapProvider(packOutput, lookupProvider));
 
         //ModelsItems
-        generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
-        generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new net.khai.create_lets_breaking_bad.datagen.ModItemModelProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new net.khai.create_lets_breaking_bad.datagen.ModBlockStateProvider(packOutput, existingFileHelper));
     }
 }

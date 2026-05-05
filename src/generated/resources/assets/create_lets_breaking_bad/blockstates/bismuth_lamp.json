@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "create_lets_breaking_bad:block/bismuth_lamp_off"
+    },
+    "clicked=true": {
+      "model": "create_lets_breaking_bad:block/bismuth_lamp_on"
+    }
+  }
+}

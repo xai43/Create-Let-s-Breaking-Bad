@@ -45,6 +45,7 @@ public class CyanideItem extends Item {
         }
 
         if (count >= 2) {
+            player.removeAllEffects();
             ResourceKey<net.minecraft.world.damagesource.DamageType> damageTypeKey =
                     ResourceKey.create(Registries.DAMAGE_TYPE,
                             ResourceLocation.fromNamespaceAndPath("create_lets_breaking_bad", "cyanide_overdose"));

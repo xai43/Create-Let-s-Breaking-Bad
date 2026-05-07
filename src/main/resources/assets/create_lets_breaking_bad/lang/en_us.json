@@ -1,5 +1,13 @@
 {
   "item.create_lets_breaking_bad.cyanide": "Cyanide",
-  "item.create_lets_breaking_bad.cyanide.desc": "0,00070 unces Potassium cyanide",
-  "death.attack.cyanide_overdose": "%s был убит слишком высокой дозой Цианида"
+  "item.create_lets_breaking_bad.cyanide.desc": "Potassium cyanide powder",
+
+  "tooltip.drug.weight": "Dose weight:",
+  "tooltip.drug.unit": " oz.",
+
+  "death.drug.overdose": "%1$s died from an overdose of %2$s",
+  "death.attack.cyanide_overdose": "%s был убит слишком высокой дозой Цианида",
+
+  "item.create_lets_breaking_bad.meth": "Blue Sky",
+  "item.create_lets_breaking_bad.meth.desc": "99.1% pure chemically synthesized crystals"
 }

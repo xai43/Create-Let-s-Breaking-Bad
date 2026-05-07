@@ -19,6 +19,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.RADISH.get());
         basicItem(ModItems.CYANIDE.get());
+        basicItem(ModItems.METH.get());
 
     }
 

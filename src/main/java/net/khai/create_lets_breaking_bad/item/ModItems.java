@@ -1,7 +1,9 @@
 package net.khai.create_lets_breaking_bad.item;
 
 import net.khai.create_lets_breaking_bad.Create_Lets_Breaking_Bad;
-import net.khai.create_lets_breaking_bad.item.custom.CyanideItem;
+import net.khai.create_lets_breaking_bad.item.custom.PowderItem;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -15,12 +17,16 @@ public class ModItems {
                     .food(ModFoodProperties.RADISH)
                     ));
 
-    public static final DeferredItem<Item> CYANIDE = ITEMS.register("cyanide",
-            () -> new CyanideItem(new Item.Properties()
-                    .food(ModFoodProperties.CYANIDE)
-                    .stacksTo(16)
-                    ));
+    public static final DeferredItem<Item> METH = ITEMS.register("meth",
+            () -> new PowderItem(new Item.Properties()
+                    .food(ModFoodProperties.METH_PROPS.getFoodProperties()),
+                    ModFoodProperties.METH_PROPS));
 
+    public static final DeferredItem<Item> CYANIDE = ITEMS.register("cyanide",
+            () -> new PowderItem(new Item.Properties()
+                    .food(ModFoodProperties.CYANIDE_PROPS.getFoodProperties())
+                    .stacksTo(16),
+                    ModFoodProperties.CYANIDE_PROPS));
 
 
 

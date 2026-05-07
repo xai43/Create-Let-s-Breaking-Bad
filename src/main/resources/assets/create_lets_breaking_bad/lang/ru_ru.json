@@ -1,6 +1,9 @@
 {
+  "death.drug.overdose": "%1$s скончался от передозировки с %2$s",
+  "tooltip.powder.info": "в %1$s %2$s гр в 1 дозе",
+  "item.create_lets_breaking_bad.meth": "Метамфетамин",
   "item.create_lets_breaking_bad.cyanide": "Цианид",
-  "item.create_lets_breaking_bad.cyanide.desc": "Цианистый Калий - 20 мг",
-  "death.attack.cyanide_overdose": "%s был убит слишком высокой дозой Цианида"
-
+  "death.attack.meth_overdose": "%1$s скончался от передозировки %2$s",
+  "death.attack.powder_overdose": "%1$s не пережил употребления %2$s"
 }
+

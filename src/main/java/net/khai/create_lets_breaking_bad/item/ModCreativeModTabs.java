@@ -25,6 +25,7 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.BISMUTH_LAMP);
                         output.accept(ModItems.CYANIDE);
                         output.accept(ModItems.RADISH);
+                        output.accept(ModItems.METH);
 
                     }).build());
 
